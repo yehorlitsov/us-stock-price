@@ -3,9 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import Dashboard from './pages/Dashboard';
+import { redirect } from 'react-router-dom';
+
+const loader = async () => {
+  return redirect('/login');
+};
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -16,6 +25,10 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
     children: [
+      {
+        index: true,
+        element: <Navigate replace to='/home' />,
+      },
       {
         path: '/home',
         element: <HomePage />,
