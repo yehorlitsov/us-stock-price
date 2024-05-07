@@ -1,6 +1,7 @@
 import React from 'react';
 import { cn } from '../../utils/cn';
 import CardHeader from './CardHeader';
+import CardContent from './CardContent';
 
 interface CardProps {
   children: React.ReactNode;
@@ -16,5 +17,6 @@ const Card = ({ children, className }: CardProps) => {
 };
 
 Card.CardHeader = CardHeader;
+Card.CardContent = CardContent;
 
 export default Card;
