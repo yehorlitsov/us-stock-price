@@ -19,8 +19,8 @@ export default function RootLayout() {
   ];
 
   return (
-    <section className='grid grid-rows-[auto,1fr] bg-background-light min-h-dvh'>
-      <header className='px-4 py-2 bg-background flex items-center justify-center gap-4'>
+    <section className='grid grid-rows-[auto,1fr] bg-background min-h-dvh'>
+      <header className='px-4 py-2 bg-white flex items-center justify-center gap-4 border-b border-border'>
         {routeLinks.map((routeLink, index) => (
           <LinkButton key={index} {...routeLink} />
         ))}

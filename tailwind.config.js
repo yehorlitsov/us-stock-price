@@ -14,7 +14,6 @@ module.exports = {
         },
         background: {
           DEFAULT: 'var(--background)',
-          light: 'var(--background-light)',
           card: 'var(--background-card)',
         },
         border: 'var(--border)',
